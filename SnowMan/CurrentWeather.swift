@@ -20,6 +20,7 @@ class CurrentWeather{
     var _min : Double!
     var _max : Double!
     var _countryCode : String!
+    var _weatherCode : Int!
     
     
     //MARK:- Getters and initializers
@@ -92,6 +93,13 @@ class CurrentWeather{
         return _countryCode
     }
     
+    var weatherCode : Int{
+        if _weatherCode == nil{
+            _weatherCode = 0
+        }
+        return _weatherCode
+    }
+    
     func kelvinToCelcius(temprature:Double) -> Double{
         let newTemp = Double(round(temprature - 273.15))
         return newTemp
@@ -117,6 +125,10 @@ class CurrentWeather{
                 if let weather = dict["weather"] as? [Dictionary<String,AnyObject>]{
                     if let type = weather[0]["main"] as? String{
                         self._weatherType = type.capitalized
+                    }
+                    
+                    if let code = weather[0]["id"] as? Int{
+                        self._weatherCode = code
                     }
                 }
                 

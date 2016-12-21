@@ -16,6 +16,7 @@ class Forecast{
     var _highTemp: Double!
     var _lowTemp: Double!
     var _weatherType : String!
+    var _weatherCode : Int!
     
     var date: String {
         if _date == nil {
@@ -43,6 +44,13 @@ class Forecast{
             _weatherType = ""
         }
         return _weatherType
+    }
+    
+    var weatherCode : Int{
+        if _weatherCode == nil{
+            _weatherCode = 0
+        }
+        return _weatherCode
     }
     
     func kelvinToCelcius(temprature: Double) -> Double{
@@ -73,6 +81,10 @@ class Forecast{
         if let weather = weatherDict["weather"] as? [Dictionary<String,AnyObject>]{
             if let main = weather[0]["main"] as? String{
                 self._weatherType = main
+            }
+            
+            if let id = weather[0]["id"] as? Int{
+                self._weatherCode = id
             }
         }
     }

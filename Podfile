@@ -7,5 +7,4 @@ target 'SnowMan' do
 
   # Pods for SnowMan
   pod 'Alamofire'
-   
 end

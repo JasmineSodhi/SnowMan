@@ -41,6 +41,7 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,18 +83,34 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         }
     }
     
+    func extractCode(code: Int) -> String{
+        switch code{
+            case 200..<260 : return "Thunderstorm"
+            case 300..<340 : return "Drizzle"
+            case 500..<540 : return "Rain"
+            case 600..<640 : return "Snow"
+            case 700..<790 : return "Atmosphere"
+            case 800..<800 : return "Clear"
+            case 801..<810 : return "Clouds"
+            case 900..<903 : return "Tornado"
+            case 903 : return "Snow"
+            case 904 : return "Clear"
+            case 905 : return "Windy"
+            case 903 : return "Hail"
+            case 951..<960 : return "Windy"
+            case 960..<965 : return "Tornado"
+            default : return "Atmosphere"
+        }
+    }
+    
     func updateMainUI(){
-//        paragraphStyle.lineSpacing = 2.0
-//        let mainC = NSAttributedString(string: currentWeather.cityName)
-//        mainC.
-        
-        
-        mainThumb.image = UIImage(named:"\(currentWeather.weatherType)")
+    
+        mainThumb.image = UIImage(named:extractCode(code:currentWeather.weatherCode))
         mainType.addCharactersSpacing(spacing: 6, text: currentWeather.weatherType.uppercased())
         mainCity.addCharactersSpacing(spacing: 4, text: "\(currentWeather.cityName), \(currentWeather.countryCode)")
         mainTemp.text = "\(currentWeather.currentTemprature)"
-        highLow.text = "\(currentWeather.min)°/\(currentWeather.max)°"
-        windSpeed.text = "\(currentWeather.windType)"
+        highLow.text = "\(Int(currentWeather.min))°/\(Int(currentWeather.max))°"
+        windSpeed.text = "\(currentWeather.windType)m/s"
         humidity.text = "\(currentWeather.humidity)"
     }
     

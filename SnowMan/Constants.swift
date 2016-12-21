@@ -15,6 +15,7 @@ let longitude = "&lon="
 let app_id = "&appid="
 let api_key = "a26524e13fd724411501e93ef445f9bc"
 
+
 typealias completed = () -> ()
 
 let currentWeatherUrl = "\(current_base_url)\(latitude)\(Location.sharedInstance.latitude!)\(longitude)\(Location.sharedInstance.longitude!)\(app_id)\(api_key)"
