@@ -1,8 +1,8 @@
 # SnowMan
 A simple, minimalist and soothing weather application made in Swift.<br><br>
 Screenshots: <br><br>
-![alt_text](https://cloud.githubusercontent.com/assets/14857735/21405127/935baa3a-c7ea-11e6-9d03-bb104a379d27.png)
-![alt_text](https://cloud.githubusercontent.com/assets/14857735/21405127/935baa3a-c7ea-11e6-9d03-bb104a379d27.png)
+![alt_text](https://cloud.githubusercontent.com/assets/14857735/21405561/9e89b530-c7ec-11e6-8684-30dfece34c1a.png)
+![alt_text](https://cloud.githubusercontent.com/assets/14857735/21405587/d019dd8c-c7ec-11e6-8c4f-e0d8eabb34c5.png)
 
 ##To-Do
 1. Handle small bugs appropriately
