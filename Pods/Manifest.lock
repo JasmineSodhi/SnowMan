@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.2.0)
+  - FSLineChart (0.1.7)
 
 DEPENDENCIES:
   - Alamofire
+  - FSLineChart
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  FSLineChart: 1b8d3727e8feb323144126d381184bf1b15e6efc
 
-PODFILE CHECKSUM: 5af34a694c9f7e87be017b34f812378a3e626fb3
+PODFILE CHECKSUM: 643e4c81af539d0e70edc7a3f1b46fd832cdac9c
 
 COCOAPODS: 1.2.0.beta.1

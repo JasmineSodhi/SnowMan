@@ -8,17 +8,22 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class CurrentWeather{
     var _cityName : String!
     var _date : String!
     var _weatherType : String!
-    var _currentTemprature : String!
-    var _humidity : String!
-    var _windType : String!
+    var _currentTemprature : Double!
+    var _humidity : Double!
+    var _windType : Double!
+    var _min : Double!
+    var _max : Double!
+    var _countryCode : String!
     
     
     //MARK:- Getters and initializers
+    
     var cityName : String{
         if _cityName == nil{
             _cityName = ""
@@ -45,30 +50,98 @@ class CurrentWeather{
         return _weatherType
     }
     
-    var currentTemprature : String{
+    var currentTemprature : Double{
         if _currentTemprature == nil{
-            _currentTemprature = ""
+            _currentTemprature = 0.0
         }
         return _currentTemprature
     }
     
-    var humidity : String{
+    var humidity : Double{
         if _humidity == nil{
-            _humidity = ""
+            _humidity = 0.0
         }
         return _humidity
     }
     
-    var windType : String{
+    var windType : Double{
         if _windType == nil{
-            _windType = ""
+            _windType = 0.0
         }
         return _windType
     }
     
+    var min : Double{
+        if _min == nil{
+            _min = 0.0
+        }
+        return _min
+    }
     
+    var max : Double{
+        if _max == nil{
+            _max = 0.0
+        }
+        return _max
+    }
     
+    var countryCode : String{
+        if _countryCode == nil{
+            _countryCode = ""
+        }
+        return _countryCode
+    }
     
+    func kelvinToCelcius(temprature:Double) -> Double{
+        let newTemp = Double(round(temprature - 273.15))
+        return newTemp
+        
+    }
     
-    
+    func downloadWeatherDetails(completed: @escaping completed){
+        
+        Alamofire.request(currentWeatherUrl, method: .get).responseJSON { (response) in
+            let result = response.result
+            if let dict = result.value as? Dictionary<String,AnyObject>{
+                
+                if let name = dict["name"] as? String{
+                    self._cityName = name.capitalized
+                }
+                
+                if let sys = dict["sys"] as? Dictionary<String,AnyObject>{
+                    if let code = sys["country"] as? String{
+                        self._countryCode = code
+                    }
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String,AnyObject>]{
+                    if let type = weather[0]["main"] as? String{
+                        self._weatherType = type.capitalized
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String,AnyObject>{
+                    if let temp = main["temp"] as? Double{
+                        self._currentTemprature = self.kelvinToCelcius(temprature: temp)
+                    }
+                    if let minimum = main["temp_min"] as? Double{
+                        self._min = self.kelvinToCelcius(temprature: minimum)
+                    }
+                    if let maximum = main["temp_max"] as? Double{
+                        self._max = self.kelvinToCelcius(temprature: maximum)
+                    }
+                    if let humid = main["humidity"] as? Double{
+                        self._humidity = humid
+                    }
+                }
+                
+                if let wind = dict["wind"] as? Dictionary<String,AnyObject>{
+                    if let speed = wind["speed"] as? Double{
+                        self._windType = speed
+                    }
+                }
+            }
+        }
+        completed()
+    }
 }

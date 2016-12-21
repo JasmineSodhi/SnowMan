@@ -6,5 +6,6 @@ target 'SnowMan' do
   use_frameworks!
 
   # Pods for SnowMan
-  pod ‘Alamofire’ 
+  pod 'Alamofire'
+   
 end

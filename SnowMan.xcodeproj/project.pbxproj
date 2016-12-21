@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		321173F4F29EA36A4F446564 /* Pods_SnowMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24098A681E0B6E343368E2B6 /* Pods_SnowMan.framework */; };
+		6B553D051E0A8C8E00A21CF1 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B553D041E0A8C8E00A21CF1 /* Nexa Bold.otf */; };
+		6B553D091E0A8C9700A21CF1 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B553D081E0A8C9700A21CF1 /* Nexa Light.otf */; };
+		6B553D0C1E0AAE5200A21CF1 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B553D0B1E0AAE5200A21CF1 /* ForecastCell.swift */; };
 		6B794CB81E09BB5A00E3BC59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CB71E09BB5A00E3BC59 /* AppDelegate.swift */; };
-		6B794CBA1E09BB5A00E3BC59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CB91E09BB5A00E3BC59 /* ViewController.swift */; };
+		6B794CBA1E09BB5A00E3BC59 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CB91E09BB5A00E3BC59 /* WeatherVC.swift */; };
 		6B794CBD1E09BB5A00E3BC59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B794CBB1E09BB5A00E3BC59 /* Main.storyboard */; };
 		6B794CC01E09BB5A00E3BC59 /* SnowMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CBE1E09BB5A00E3BC59 /* SnowMan.xcdatamodeld */; };
 		6B794CC21E09BB5A00E3BC59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B794CC11E09BB5A00E3BC59 /* Assets.xcassets */; };
@@ -17,15 +20,66 @@
 		6B794CD11E09C15800E3BC59 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CD01E09C15800E3BC59 /* CurrentWeather.swift */; };
 		6B794CD31E09C54300E3BC59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CD21E09C54300E3BC59 /* Constants.swift */; };
 		6B794CD51E09C99B00E3BC59 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CD41E09C99A00E3BC59 /* Location.swift */; };
+		6B794CD71E09D57700E3BC59 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B794CD61E09D57700E3BC59 /* Forecast.swift */; };
+		6B794CE61E09E30500E3BC59 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B794CE11E09E2DD00E3BC59 /* Charts.framework */; };
+		6B794CE71E09E30500E3BC59 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B794CE11E09E2DD00E3BC59 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B794CE01E09E2DD00E3BC59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		6B794CE21E09E2DD00E3BC59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		6B794CE41E09E2DD00E3BC59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		6B794CE81E09E30500E3BC59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6B794CEA1E09E30500E3BC59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6B794CE71E09E30500E3BC59 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		24098A681E0B6E343368E2B6 /* Pods_SnowMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2892393A041F8547F8CF2B1C /* Pods-SnowMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowMan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnowMan/Pods-SnowMan.debug.xcconfig"; sourceTree = "<group>"; };
 		5F1B8DF076BDDAFA0253ABF9 /* Pods-SnowMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowMan.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnowMan/Pods-SnowMan.release.xcconfig"; sourceTree = "<group>"; };
+		6B553D041E0A8C8E00A21CF1 /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		6B553D081E0A8C9700A21CF1 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
+		6B553D0B1E0AAE5200A21CF1 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		6B794CB41E09BB5A00E3BC59 /* SnowMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B794CB71E09BB5A00E3BC59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B794CB91E09BB5A00E3BC59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B794CB91E09BB5A00E3BC59 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		6B794CBC1E09BB5A00E3BC59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B794CBF1E09BB5A00E3BC59 /* SnowMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnowMan.xcdatamodel; sourceTree = "<group>"; };
 		6B794CC11E09BB5A00E3BC59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +88,8 @@
 		6B794CD01E09C15800E3BC59 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		6B794CD21E09C54300E3BC59 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6B794CD41E09C99A00E3BC59 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6B794CD61E09D57700E3BC59 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321173F4F29EA36A4F446564 /* Pods_SnowMan.framework in Frameworks */,
+				6B794CE61E09E30500E3BC59 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +117,7 @@
 		6B794CAB1E09BB5A00E3BC59 = {
 			isa = PBXGroup;
 			children = (
+				6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */,
 				6B794CB61E09BB5A00E3BC59 /* SnowMan */,
 				6B794CB51E09BB5A00E3BC59 /* Products */,
 				010796DE83FAF1A2E8A5DE8C /* Pods */,
@@ -82,13 +140,14 @@
 				6B794CCD1E09BB6F00E3BC59 /* View */,
 				6B794CCE1E09BB7700E3BC59 /* Controller */,
 				6B794CCF1E09BB8900E3BC59 /* Utils */,
-				6B794CB91E09BB5A00E3BC59 /* ViewController.swift */,
 				6B794CB71E09BB5A00E3BC59 /* AppDelegate.swift */,
 				6B794CBB1E09BB5A00E3BC59 /* Main.storyboard */,
 				6B794CC11E09BB5A00E3BC59 /* Assets.xcassets */,
 				6B794CC31E09BB5A00E3BC59 /* LaunchScreen.storyboard */,
 				6B794CC61E09BB5A00E3BC59 /* Info.plist */,
 				6B794CBE1E09BB5A00E3BC59 /* SnowMan.xcdatamodeld */,
+				6B553D041E0A8C8E00A21CF1 /* Nexa Bold.otf */,
+				6B553D081E0A8C9700A21CF1 /* Nexa Light.otf */,
 			);
 			path = SnowMan;
 			sourceTree = "<group>";
@@ -97,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				6B794CD01E09C15800E3BC59 /* CurrentWeather.swift */,
+				6B794CD61E09D57700E3BC59 /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -104,6 +164,7 @@
 		6B794CCD1E09BB6F00E3BC59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B553D0B1E0AAE5200A21CF1 /* ForecastCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,6 +172,7 @@
 		6B794CCE1E09BB7700E3BC59 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B794CB91E09BB5A00E3BC59 /* WeatherVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -122,6 +184,16 @@
 				6B794CD41E09C99A00E3BC59 /* Location.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		6B794CDB1E09E2DC00E3BC59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B794CE11E09E2DD00E3BC59 /* Charts.framework */,
+				6B794CE31E09E2DD00E3BC59 /* ChartsRealm.framework */,
+				6B794CE51E09E2DD00E3BC59 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F7948D01E053C7285FBB00F9 /* Frameworks */ = {
@@ -145,10 +217,12 @@
 				6B794CB21E09BB5A00E3BC59 /* Resources */,
 				124245B4A5BCC48BB116870B /* [CP] Embed Pods Frameworks */,
 				FCF29FDA72D71B6B7D83B2C3 /* [CP] Copy Pods Resources */,
+				6B794CEA1E09E30500E3BC59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6B794CE91E09E30500E3BC59 /* PBXTargetDependency */,
 			);
 			name = SnowMan;
 			productName = SnowMan;
@@ -183,6 +257,12 @@
 			mainGroup = 6B794CAB1E09BB5A00E3BC59;
 			productRefGroup = 6B794CB51E09BB5A00E3BC59 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B794CDB1E09E2DC00E3BC59 /* Products */;
+					ProjectRef = 6B794CDA1E09E2DC00E3BC59 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6B794CB31E09BB5A00E3BC59 /* SnowMan */,
@@ -190,12 +270,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		6B794CE11E09E2DD00E3BC59 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 6B794CE01E09E2DD00E3BC59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B794CE31E09E2DD00E3BC59 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 6B794CE21E09E2DD00E3BC59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B794CE51E09E2DD00E3BC59 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 6B794CE41E09E2DD00E3BC59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		6B794CB21E09BB5A00E3BC59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B553D091E0A8C9700A21CF1 /* Nexa Light.otf in Resources */,
 				6B794CC51E09BB5A00E3BC59 /* LaunchScreen.storyboard in Resources */,
+				6B553D051E0A8C8E00A21CF1 /* Nexa Bold.otf in Resources */,
 				6B794CC21E09BB5A00E3BC59 /* Assets.xcassets in Resources */,
 				6B794CBD1E09BB5A00E3BC59 /* Main.storyboard in Resources */,
 			);
@@ -257,8 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B794CD31E09C54300E3BC59 /* Constants.swift in Sources */,
-				6B794CBA1E09BB5A00E3BC59 /* ViewController.swift in Sources */,
+				6B794CBA1E09BB5A00E3BC59 /* WeatherVC.swift in Sources */,
+				6B794CD71E09D57700E3BC59 /* Forecast.swift in Sources */,
 				6B794CB81E09BB5A00E3BC59 /* AppDelegate.swift in Sources */,
+				6B553D0C1E0AAE5200A21CF1 /* ForecastCell.swift in Sources */,
 				6B794CD11E09C15800E3BC59 /* CurrentWeather.swift in Sources */,
 				6B794CD51E09C99B00E3BC59 /* Location.swift in Sources */,
 				6B794CC01E09BB5A00E3BC59 /* SnowMan.xcdatamodeld in Sources */,
@@ -266,6 +374,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B794CE91E09E30500E3BC59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 6B794CE81E09E30500E3BC59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B794CBB1E09BB5A00E3BC59 /* Main.storyboard */ = {
@@ -382,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2892393A041F8547F8CF2B1C /* Pods-SnowMan.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VG36S3M9UZ;
 				INFOPLIST_FILE = SnowMan/Info.plist;
@@ -396,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F1B8DF076BDDAFA0253ABF9 /* Pods-SnowMan.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VG36S3M9UZ;
 				INFOPLIST_FILE = SnowMan/Info.plist;
@@ -425,6 +543,7 @@
 				6B794CCB1E09BB5A00E3BC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
