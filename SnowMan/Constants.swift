@@ -14,7 +14,10 @@ let latitude = "lat="
 let longitude = "&lon="
 let app_id = "&appid="
 let api_key = "YOUR-API-KEY-HERE"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 227293334fb323f1186350d399b51a6cb3d1832d
 
 typealias completed = () -> ()
 
