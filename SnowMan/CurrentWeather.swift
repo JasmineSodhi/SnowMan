@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 import Alamofire
 
+    /*
+    Information about methods used (Variable names are self explanatory)
+    * downloadWeatherDetails = The method which requests the api and downloads the response. Ends with a completionHandler *
+    */
+
 class CurrentWeather{
     var _cityName : String!
     var _date : String!

@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/*
+ A singleton class created for the purpose of holding Latitude and Longitude across the application
+*/
 
 class Location{
     static var sharedInstance = Location()

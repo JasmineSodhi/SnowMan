@@ -8,16 +8,26 @@
 
 import Foundation
 import UIKit
+
+/*
+ * Information about variables declared
+ * current_base_url   = Base url for all current weather api requests        *
+ * daily_base_url     = Base url for forecast weather api requests           *
+ * latitude           = Variable for the purpose of formatting               *
+ * longitude          = Variable for the purpose of formatting               *
+ * app_id             = Variable for the purpose of formatting               *
+ * api_key            = Variable which holds your openWeatherMap Api key     *
+ * completed          = A typealias which acts as a flag for certian things  *
+ * currentWeatherUrl  = All variables formatted to create the request URL    *
+ * forecastWeatherUrl = All variables formatted to create the request URL    *
+*/
+
 let current_base_url = "http://api.openweathermap.org/data/2.5/weather?"
 let daily_base_url = "http://api.openweathermap.org/data/2.5/forecast/daily?"
 let latitude = "lat="
 let longitude = "&lon="
 let app_id = "&appid="
-let api_key = "YOUR-API-KEY-HERE"
-<<<<<<< HEAD
-
-=======
->>>>>>> 227293334fb323f1186350d399b51a6cb3d1832d
+let api_key = "YOUR_API_KEY_HERE"
 
 typealias completed = () -> ()
 

@@ -10,6 +10,19 @@ import UIKit
 
 class ForecastCell: UICollectionViewCell {
     
+    /*
+    * Information about all the variables and methods used                        *
+    Variables
+    * dayLabel   = The label which displays the day                               *
+    * imageLabel = The label which displays the image                             *
+    * tempLabel  = The label which displays the temprature                        *
+    
+    Methods
+    * configureCell = The method which sets up the UI for the cell                *
+    * extractCode   = The method which rounds off the weather code from the api   *
+    */
+    
+    
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!

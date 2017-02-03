@@ -12,6 +12,28 @@ import CoreLocation
 
 class WeatherVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    /*
+    * Information about all the variables and methods used                                                     *
+      Variables
+    * mainThum        = The main thumbnail weather UIIMageView()                                               *
+    * mainType        = The main weather type displayed label                                                  *
+    * mainCity        = The city detected by your current location label                                       *
+    * mainTemp        = The current temprature label                                                           *
+    * highLow         = The high/low temprature label                                                          *
+    * windSpeed       = The wind speed label                                                                   *
+    * humidity        = The humidity label                                                                     *
+    * collectionView  = The collectionView used at the bottom of the page                                      *
+    * currenLocation  = The current location instance of CLLocation                                            *
+    * currentWeather  = The instance of class CurrentWeather                                                   *
+    * forecasts       = Array of Forecast type which is data for collectionView                                *
+      
+      Methods
+    * locationAuthStatus   = This checks for current user authorizations for location                          *
+    * downloadForecastData = This downloads the forecast data to be used in collectionView                     *
+    * extractCode          = This method rounds the weather code recieved from the api                         *
+    * updateMainUI         = This method updates the UI once the confirmation of completionHandler is received *
+    */
+    
     @IBOutlet weak var mainThumb: UIImageView!
     @IBOutlet weak var mainType: UILabel!
     @IBOutlet weak var mainCity: UILabel!
@@ -62,7 +84,6 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
             }
         }else{
             locationManager.requestWhenInUseAuthorization()
-            locationAuthStatus()
         }
     }
     
@@ -81,6 +102,11 @@ class WeatherVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
             }
             completed()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        locationAuthStatus()
     }
     
     func extractCode(code: Int) -> String{

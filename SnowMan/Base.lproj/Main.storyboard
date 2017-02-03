@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="IrF-dN-fGV" userLabel="First View">
                                 <rect key="frame" x="42.5" y="50" width="291" height="221"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3DF23D4E-7C7A-4996-A8D8-7430DDCD8C49" translatesAutoresizingMaskIntoConstraints="NO" id="l53-8h-pRr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5EE7442C-FAD8-4C3E-8F70-FE59E3D7195B" translatesAutoresizingMaskIntoConstraints="NO" id="l53-8h-pRr">
                                         <rect key="frame" x="110.5" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Se7-1m-gg9"/>
@@ -156,7 +156,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18°/24°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbE-LE-Zgm">
-                                                    <rect key="frame" x="8.5" y="89" width="59" height="17"/>
+                                                    <rect key="frame" x="9.5" y="89" width="59" height="17"/>
                                                     <fontDescription key="fontDescription" name="NexaLight" family="Nexa Light" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3DF23D4E-7C7A-4996-A8D8-7430DDCD8C49" width="512" height="512">
+        <image name="5EE7442C-FAD8-4C3E-8F70-FE59E3D7195B" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -17747,6 +17747,6 @@ ABAKVAAQClkAEAphABAKZAAQCmkAEApxABAKdAAQCoYAEAqJABAKjgAAAAAAAAQBAAAAAAAAAEEAAAAA
 AAAAAAAAAAAAEAqQA
 </mutableData>
         </image>
-        <image name="Clear" width="512" height="512"/>
+        <image name="Clear" width="256" height="256"/>
     </resources>
 </document>
