@@ -27,7 +27,8 @@ let daily_base_url = "http://api.openweathermap.org/data/2.5/forecast/daily?"
 let latitude = "lat="
 let longitude = "&lon="
 let app_id = "&appid="
-let api_key = "YOUR_API_KEY_HERE"
+let api_key = "YOUR-API-KEY-HERE"
+
 
 typealias completed = () -> ()
 

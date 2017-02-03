@@ -16,7 +16,8 @@ Also, UI was inspired by [Weather Design](https://ios.uplabs.com/posts/weather-d
 ###I downloaded the project, what now?
 1. Go to the file directory and do a ```pod install```. You must have Cocoapods installed on your system. For more information on Cocoapods, visit [here](https://cocoapods.org/).
 2. Next, go to "Constants.swift" under the "Utils" folder. Hop on to line 16 and insert your OpenWeatherMap API key. You can get one [here](https://openweathermap.org/price).
-3. Build and Run the project!
+3. open ```SnowMan.xcworkspace```
+4. Build and Run the project!
 
 ###Requirements
 1. Swift 3.0
