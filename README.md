@@ -22,4 +22,4 @@ Also, UI was inspired by [Weather Design](https://ios.uplabs.com/posts/weather-d
 ###Requirements
 1. Swift 3.0
 2. Xcode 8.0+
-3. Cocoapods 1.2.0 (Beta), should work with the stable release as well, although not tested.
+3. Cocoapods 1.2.0 (Beta) , should work with the stable release as well, although not tested.
